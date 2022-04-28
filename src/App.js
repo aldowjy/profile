@@ -7,92 +7,161 @@ import {
   SimpleGrid,
   Stack,
   Button,
+  Flex,
+  Spacer,
+  HStack,
+  Container,
+  Image,
 } from "@chakra-ui/react";
 import { PhoneIcon } from "@chakra-ui/icons";
 
 function App() {
   return (
-    <div className="App">
-      <Box bg="tomato" w="100%" p={4} color="white">
-        <Heading as="h4" size="md">
-          dovin • Home • Services • About • Skills • Portfolio • Contact
-        </Heading>
-      </Box>
-      <Box p={16} bg="tomato">
-        <Heading as="h3" size="lg" mb={2}>
-          Hello.
-        </Heading>
-        <Heading as="h2" size="3xl" mb={2}>
-          I am Aldo Wijaya
-        </Heading>
-        <Heading as="h4" size="md" mb={8}>
-          i'm Aldo, professional web developer, mobile developer, and a gamer.
-        </Heading>
-        <PhoneIcon />
-        <PhoneIcon />
-        <PhoneIcon />
-        <PhoneIcon />
-        <PhoneIcon />
+    <div className="App" bg="#1f2235">
+      <Container maxW="container.xl" bg="#1f2235">
+        <Flex>
+          <Text p={4} color="white" style={{ fontWeight: "bold" }}>
+            dovin
+          </Text>
+          <Spacer />
+          <HStack p={4} spacing="24px">
+            <Text color="white" style={{ fontWeight: "bold" }}>
+              Home
+            </Text>
+            <Text color="white" style={{ fontWeight: "bold" }}>
+              Services
+            </Text>
+            <Text color="white" style={{ fontWeight: "bold" }}>
+              About
+            </Text>
+            <Text color="white" style={{ fontWeight: "bold" }}>
+              Skills
+            </Text>
+            <Text color="white" style={{ fontWeight: "bold" }}>
+              Portfolio
+            </Text>
+            <Text color="white" style={{ fontWeight: "bold" }}>
+              Contact
+            </Text>
+          </HStack>
+        </Flex>
+      </Container>
+
+      <Box p={16} bg="#23263a">
+        <Box m={16} p={16}>
+          <Heading as="h3" size="lg" mb={2} color="#ff4a56">
+            Hello
+          </Heading>
+          <Heading as="h2" size="3xl" mb={2}>
+            I am Aldo Wijaya
+          </Heading>
+          <Heading as="h4" size="md" mb={8}>
+            i'm Aldo, professional web developer, mobile developer, and a gamer.
+          </Heading>
+
+          {/* <PhoneIcon />
+          <PhoneIcon />
+          <PhoneIcon />
+          <PhoneIcon />
+          <PhoneIcon /> */}
+        </Box>
       </Box>
 
-      <Box padding={16} bg="gray">
+      <Box p={16}>
         <Center mb={2}>
-          <Text fontSize="lg">SERVICES</Text>
+          <Text fontSize="lg" color="#ff4a56">
+            SERVICES
+          </Text>
         </Center>
         <Center mb={2}>
-          <Text fontSize="xl">My Services</Text>
+          <Text fontSize="xl" style={{ fontWeight: "bold" }}>
+            My Services
+          </Text>
         </Center>
-        <Center mb={8}>
+        <Center mb={16}>
           <Text fontSize="md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Text>
         </Center>
         <Center>
-          <SimpleGrid columns={3} spacing={10}>
-            <Box bg="tomato" height="200px" width="200px" m={4} p={4}>
-              a
+          <SimpleGrid columns={3} spacing={10} mb={8}>
+            <Box bg="#ff4a56" height="200px" width="350px" p={4}>
+              <Text fontSize="lg" style={{ fontWeight: "bold" }} mb={8}>
+                Web Development
+              </Text>
+              <Text fontSize="md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text>
             </Box>
-            <Box bg="tomato" height="200px" width="200px" m={4} p={4}>
-              b
+            <Box bg="#ff4a56" height="200px" width="350px" p={4}>
+              <Text fontSize="lg" style={{ fontWeight: "bold" }} mb={8}>
+                Mobile Development
+              </Text>
+              <Text fontSize="md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text>
             </Box>
-            <Box bg="tomato" height="200px" width="200px" m={4} p={4}>
-              c
+            <Box bg="#ff4a56" height="200px" width="350px" p={4}>
+              <Text fontSize="lg" style={{ fontWeight: "bold" }} mb={8}>
+                Video Editing
+              </Text>
+              <Text fontSize="md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text>
             </Box>
           </SimpleGrid>
         </Center>
         <Center>
-          <SimpleGrid columns={3} spacing={10}>
-            <Box bg="tomato" height="200px" width="200px" m={4} p={4}>
-              d
+          <SimpleGrid columns={2} spacing={10}>
+            <Box bg="#ff4a56" height="200px" width="350px" p={4}>
+              <Text fontSize="lg" style={{ fontWeight: "bold" }} mb={8}>
+                Game Streamer
+              </Text>
+              <Text fontSize="md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text>
             </Box>
-            <Box bg="tomato" height="200px" width="200px" m={4} p={4}>
-              e
-            </Box>
-            <Box bg="tomato" height="200px" width="200px" m={4} p={4}>
-              f
+            <Box bg="#ff4a56" height="200px" width="350px" p={4}>
+              <Text fontSize="lg" style={{ fontWeight: "bold" }} mb={8}>
+                Gamer as Hobby
+              </Text>
+              <Text fontSize="md">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text>
             </Box>
           </SimpleGrid>
         </Center>
       </Box>
 
-      <Box padding={16} bg="tomato">
-        <Center mb={2}>
-          <Text fontSize="xl">About Me</Text>
-        </Center>
-        <Center mb={8}>
-          <Text fontSize="md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      <Box p={16} bg="#23263a">
+        <Center mb={16}>
+          <Text fontSize="xl" style={{ fontWeight: "bold" }}>
+            About Me
           </Text>
         </Center>
         <Center>
           <SimpleGrid columns={2} spacing={10}>
-            <Box bg="gray" height="200px" m={4} p={4}>
-              a
+            <Box height="300px" m={4} p={4}>
+              <Flex dir="row">
+                <Spacer />
+                <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
+              </Flex>
             </Box>
-            <Box bg="gray" height="250px" m={4} p={4}>
-              <Text fontSize="xl">Hi There</Text>
+            <Box height="300px" m={4} p={4}>
+              <Text
+                fontSize="xl"
+                color="#ff4a56"
+                style={{ fontWeight: "bold" }}
+                mb={8}
+              >
+                Hi There
+              </Text>
               <Text fontSize="md">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -107,123 +176,104 @@ function App() {
         </Center>
       </Box>
 
-      <Box padding={16} bg="gray">
+      <Box p={16}>
         <Center mb={2}>
-          <Text fontSize="xl">My Skills</Text>
+          <Text fontSize="xl" style={{ fontWeight: "bold" }}>
+            My Skills
+          </Text>
         </Center>
-        <Center mb={8}>
+        <Center mb={16}>
           <Text fontSize="md">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Text>
         </Center>
         <Center>
-          <SimpleGrid columns={4} spacing={10}>
-            <Box bg="tomato" height="200px" width="300px" p={4}>
-              a
+          <SimpleGrid columns={4} spacing={10} mb={8}>
+            <Box bg="#ff4a56" height="200px" width="300px" p={4}>
+              <Center>
+                <Text fontSize="4xl">React JS</Text>
+              </Center>
             </Box>
-            <Box bg="white" height="200px" width="300px" p={4}>
-              b
+            <Box bg="gray" height="200px" width="300px" p={4}>
+              <Center>
+                <Text fontSize="4xl">Vue</Text>
+              </Center>
             </Box>
-            <Box bg="tomato" height="200px" width="300px" p={4}>
-              c
+            <Box bg="#ff4a56" height="200px" width="300px" p={4}>
+              <Center>
+                <Text fontSize="4xl">Android</Text>
+              </Center>
             </Box>
-            <Box bg="white" height="200px" width="300px" p={4}>
-              d
+            <Box bg="gray" height="200px" width="300px" p={4}>
+              <Center>
+                <Text fontSize="4xl">Premiere</Text>
+              </Center>
             </Box>
           </SimpleGrid>
         </Center>
         <Center>
-          <SimpleGrid columns={4} spacing={10}>
-            <Box bg="white" height="200px" width="300px" p={4}>
-              a
+          <SimpleGrid columns={3} spacing={10}>
+            <Box bg="gray" height="200px" width="300px" p={4}>
+              <Center>
+                <Text fontSize="4xl">HTML</Text>
+              </Center>
             </Box>
-            <Box bg="tomato" height="200px" width="300px" p={4}>
-              b
+            <Box bg="#ff4a56" height="200px" width="300px" p={4}>
+              <Center>
+                <Text fontSize="4xl">CSS</Text>
+              </Center>
             </Box>
-            <Box bg="white" height="200px" width="300px" p={4}>
-              c
-            </Box>
-            <Box bg="tomato" height="200px" width="300px" p={4}>
-              d
+            <Box bg="gray" height="200px" width="300px" p={4}>
+              <Center>
+                <Text fontSize="4xl">Javascript</Text>
+              </Center>
             </Box>
           </SimpleGrid>
         </Center>
       </Box>
 
-      <Box padding={16} bg="tomato">
-        <Center mb={2}>
-          <Text fontSize="xl">Portfolio</Text>
-        </Center>
+      <Box p={16} bg="#23263a">
         <Center mb={8}>
-          <Text fontSize="md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          <Text fontSize="xl" style={{ fontWeight: "bold" }}>
+            Portfolio
           </Text>
         </Center>
         <Center>
-          <Stack spacing={4} direction="row" align="center" mb={8}>
-            <Button colorScheme="teal" size="md">
+          <Stack spacing={4} direction="row" align="center" mb={16}>
+            <Button color="#ff4a56" size="md">
               All Works
             </Button>
-            <Button colorScheme="teal" size="md">
+            <Button color="#ff4a56" size="md">
               Website
             </Button>
-            <Button colorScheme="teal" size="md">
+            <Button color="#ff4a56" size="md">
               Mobile
             </Button>
-            <Button colorScheme="teal" size="md">
+            <Button color="#ff4a56" size="md">
               Design
             </Button>
-            <Button colorScheme="teal" size="md">
+            <Button color="#ff4a56" size="md">
               Video
             </Button>
           </Stack>
         </Center>
-        <Center>
-          <SimpleGrid columns={4} spacing={10}>
-            <Box bg="blue" height="200px" width="300px" p={4}>
-              a
-            </Box>
-            <Box bg="white" height="200px" width="300px" p={4}>
-              b
-            </Box>
-            <Box bg="blue" height="200px" width="300px" p={4}>
-              c
-            </Box>
-            <Box bg="white" height="200px" width="300px" p={4}>
-              d
-            </Box>
-          </SimpleGrid>
-        </Center>
-        <Center>
-          <SimpleGrid columns={4} spacing={10}>
-            <Box bg="white" height="200px" width="300px" p={4}>
-              a
-            </Box>
-            <Box bg="blue" height="200px" width="300px" p={4}>
-              b
-            </Box>
-            <Box bg="white" height="200px" width="300px" p={4}>
-              c
-            </Box>
-            <Box bg="blue" height="200px" width="300px" p={4}>
-              d
-            </Box>
-          </SimpleGrid>
-        </Center>
       </Box>
 
-      <Box padding={16} bg="gray">
-        <Center mb={2}>
-          <Text fontSize="xl">Portfolio</Text>
-        </Center>
-        <Center mb={8}>
-          <Text fontSize="md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </Text>
-        </Center>
+      <Box p={16}>
+        <Box p={16}>
+          <Center mb={2}>
+            <Text fontSize="xl" style={{ fontWeight: "bold" }}>
+              Contact Me
+            </Text>
+          </Center>
+          <Center mb={8}>
+            <Text fontSize="md" color="#ff4a56">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Text>
+          </Center>
+        </Box>
       </Box>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
