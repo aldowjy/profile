@@ -9,18 +9,18 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const colors = {
   default: {
-    500: "#1f2235",
+    500: "#ffffff",
   },
   primary: {
-    100: "#ff4a56",
-    500: "#ff4a56",
+    100: "#1978BC",
+    500: "#1978BC",
   },
 };
 
 const Button = {
   // The styles all Cards have in common
   baseStyle: {
-    fontWeight: "bold",
+    // fontWeight: "bold",
     textTransform: "uppercase",
     borderRadius: "base", // <-- border radius is same for all variants and sizes
   },
@@ -41,25 +41,25 @@ const Button = {
   variants: {
     outline: {
       border: "2px solid",
-      borderColor: "#ff4a56",
-      color: "#ff4a56",
+      borderColor: "#1978BC",
+      color: "#1978BC",
       _hover: {
-        bg: "#ff4a56",
+        bg: "#1978BC",
         color: "white",
       },
     },
     solid: {
-      bg: "#ff4a56",
+      bg: "#1978BC",
       color: "white",
       _hover: {
-        bg: "#e6000f",
+        bg: "#1978BC",
       },
     },
     ghost: {
       bg: "transparent",
-      color: "#ff4a56",
+      color: "#1978BC",
       _hover: {
-        bg: "#ff4a56",
+        bg: "#1978BC",
         color: "white",
       },
     },
@@ -72,6 +72,10 @@ const Button = {
 };
 
 const theme = extendTheme({
+  fonts: {
+    heading: `'Roboto Regular', sans-serif`,
+    body: `'Roboto Regular', sans-serif`,
+  },
   colors,
   components: {
     Button,

@@ -1,3 +1,25 @@
+import { Icon } from "@chakra-ui/icons";
+import {
+  SiLinkedin,
+  SiGmail,
+  SiAntdesign,
+  SiChakraui,
+  SiAdobeillustrator,
+  SiAdobephotoshop,
+} from "react-icons/si";
+import {
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaVuejs,
+  FaGithub,
+  FaBootstrap,
+  FaAndroid,
+  FaReact,
+  FaGitlab,
+} from "react-icons/fa";
+import { MdOutlineDesignServices } from "react-icons/md";
+import { RiSketching } from "react-icons/ri";
 import "./App.css";
 import {
   Box,
@@ -5,7 +27,6 @@ import {
   Text,
   Center,
   SimpleGrid,
-  Stack,
   Button,
   Flex,
   Spacer,
@@ -18,36 +39,37 @@ import {
   TabPanel,
   TabPanels,
   Hide,
+  Link,
 } from "@chakra-ui/react";
-import { PhoneIcon } from "@chakra-ui/icons";
+import { aldo_picture } from "../src/assets/images";
 
 function App() {
   return (
-    <div className="App" bg="default.500">
-      <Container maxW="container.xl" bg="default.500">
+    <div className="App">
+      <Container maxW="container.xl">
         <Flex>
-          <Text p={4} color="primary.500" style={{ fontWeight: "bold" }}>
+          <Text p={4} color="primary.500" fontWeight="bold">
             dovin
           </Text>
           <Spacer />
-          <HStack p={4} spacing={10}>
-            <Button variant="ghost" size={["xs", "sm"]}>
+          <HStack p={4} spacing={12}>
+            <Button variant="ghost" size={["xs", "sm"]} p={2}>
               Home
             </Button>
             <Hide below="md">
-              <Button variant="ghost" size={["xs", "sm"]}>
+              <Button variant="ghost" size={["xs", "sm"]} p={2}>
                 Services
               </Button>
-              <Button variant="ghost" size={["xs", "sm"]}>
+              <Button variant="ghost" size={["xs", "sm"]} p={2}>
                 About
               </Button>
-              <Button variant="ghost" size={["xs", "sm"]}>
+              <Button variant="ghost" size={["xs", "sm"]} p={2}>
                 Skills
               </Button>
-              <Button variant="ghost" size={["xs", "sm"]}>
+              <Button variant="ghost" size={["xs", "sm"]} p={2}>
                 Portfolio
               </Button>
-              <Button variant="ghost" size={["xs", "sm"]}>
+              <Button variant="ghost" size={["xs", "sm"]} p={2}>
                 Contact
               </Button>
             </Hide>
@@ -55,22 +77,31 @@ function App() {
         </Flex>
       </Container>
 
-      <Box p={[4, 6, 8, 16]} bg="#23263a">
-        <Box m={[4, 6, 8, 16]} p={[4, 6, 8, 16]}>
+      <Box p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
+        <Box
+          maxW="xl"
+          borderWidth="2px"
+          borderColor="#1978BC"
+          borderRadius="xl"
+          overflow="hidden"
+          p={[4, 6, 8, 16]}
+          position="relative"
+          boxShadow={["5px 5px #1978BC", "10px 10px #1978BC"]}
+        >
           <Heading
             as="h2"
             size="xl"
-            mb={2}
-            color="primary.500"
             fontSize={["sm", "md", "lg", "xl"]}
+            color="primary.500"
           >
-            Hello
+            Hello,
           </Heading>
           <Heading
             as="h1"
             size="4xl"
-            mb={2}
+            mb={4}
             fontSize={["xl", "2xl", "3xl", "4xl"]}
+            color="primary.500"
           >
             I am Aldo Wijaya
           </Heading>
@@ -80,27 +111,18 @@ function App() {
             mb={[4, 6, 8, 16]}
             fontSize={["xs", "sm", "md", "lg"]}
           >
-            professional web and mobile developer, freelance and a gamer.
+            professional web developer, freelancer and a gamer.
           </Heading>
-          <Button variant="outline">My Portfolio</Button>
-          {/* <PhoneIcon />
-          <PhoneIcon />
-          <PhoneIcon />
-          <PhoneIcon />
-          <PhoneIcon /> */}
+          <Button variant="solid">My Portfolio</Button>
         </Box>
       </Box>
 
-      <Box p={[4, 6, 8, 16]}>
-        <Center mb={2}>
-          <Text fontSize={["sm", "md", "lg", "xl"]} color="primary.500">
-            SERVICES
-          </Text>
-        </Center>
+      <Box p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
         <Center mb={2}>
           <Text
             fontSize={["md", "lg", "xl", "2xl"]}
-            style={{ fontWeight: "bold" }}
+            fontWeight="bold"
+            color="primary.500"
           >
             My Services
           </Text>
@@ -111,168 +133,337 @@ function App() {
           </Text>
         </Center>
         <Center>
-          <SimpleGrid columns={[2, 3, 4]} spacing={10} mb={8}>
-            <Box bg="primary.500" h={[250]} w={[150, 250, 350]} p={4}>
+          <SimpleGrid columns={[2, 3]} spacing={12} mb={8} textAlign="center">
+            <Box
+              bg="primary.500"
+              h={[250]}
+              w={[150, 250, 350]}
+              p={4}
+              borderRadius="xl"
+            >
               <Text
                 fontSize={["sm", "md", "lg", "xl"]}
-                style={{ fontWeight: "bold" }}
+                fontWeight="bold"
+                color="white"
                 mb={8}
               >
                 Web Development
               </Text>
-              <Text fontSize={["xs", "sm", "md", "lg"]}>
+              <Text fontSize={["xs", "sm", "md", "lg"]} color="white">
                 web development for personal branding, wedding invitations,
                 operating systems, managing dashboards, etc.
               </Text>
             </Box>
-            <Box bg="primary.500" h={[250]} w={[150, 250, 350]} p={4}>
+            <Box
+              bg="primary.500"
+              h={[250]}
+              w={[150, 250, 350]}
+              p={4}
+              borderRadius="xl"
+            >
               <Text
                 fontSize={["sm", "md", "lg", "xl"]}
-                style={{ fontWeight: "bold" }}
+                fontWeight="bold"
+                color="white"
                 mb={8}
               >
                 Mobile Development
               </Text>
-              <Text fontSize={["xs", "sm", "md", "lg"]}>
+              <Text fontSize={["xs", "sm", "md", "lg"]} color="white">
                 mobile development for managing cashier work, recording income
                 and expenses, etc.
               </Text>
             </Box>
-            <Box bg="primary.500" h={[250]} w={[150, 250, 350]} p={4}>
+            <Box
+              bg="primary.500"
+              h={[250]}
+              w={[150, 250, 350]}
+              p={4}
+              borderRadius="xl"
+            >
               <Text
                 fontSize={["sm", "md", "lg", "xl"]}
-                style={{ fontWeight: "bold" }}
+                fontWeight="bold"
+                color="white"
                 mb={8}
               >
                 Video Editing
               </Text>
-              <Text fontSize={["xs", "sm", "md", "lg"]}>
+              <Text fontSize={["xs", "sm", "md", "lg"]} color="white">
                 I am able to do basic video editing such as making After Event
                 Videos, Game Highlights, etc.
-              </Text>
-            </Box>
-            <Box bg="primary.500" h={[250]} w={[150, 250, 350]} p={4}>
-              <Text
-                fontSize={["sm", "md", "lg", "xl"]}
-                style={{ fontWeight: "bold" }}
-                mb={8}
-              >
-                Game Streamer
-              </Text>
-              <Text fontSize={["xs", "sm", "md", "lg"]}>
-                besides being a developer, on the other hand I have a hobby of
-                playing online games
               </Text>
             </Box>
           </SimpleGrid>
         </Center>
       </Box>
 
-      <Box p={[4, 6, 8, 16]} bg="#23263a">
+      <Box p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
         <Center mb={[4, 6, 8, 16]}>
           <Text
             fontSize={["md", "lg", "xl", "2xl"]}
-            style={{ fontWeight: "bold" }}
+            fontWeight="bold"
+            color="primary.500"
           >
             About Me
           </Text>
         </Center>
         <Center>
-          <SimpleGrid columns={[1, 2]} spacing={10}>
-            <Box height="300px" m={4} p={4}>
-              <Flex dir="row">
-                <Spacer />
-                <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
-              </Flex>
+          <SimpleGrid columns={[1, 2]} spacing={12}>
+            <Box m={4} p={4} align="center">
+              <Image
+                width={["200px", "350px"]}
+                objectFit="cover"
+                src={aldo_picture}
+                alt="Aldo Picture"
+              />
             </Box>
             <Box height="300px" m={4} p={4}>
               <Text
                 fontSize={["md", "lg", "xl", "2xl"]}
-                color="primary.500"
-                style={{ fontWeight: "bold" }}
+                fontWeight="bold"
                 mb={8}
               >
                 Hi There
               </Text>
               <Text fontSize={["xs", "sm", "md", "lg"]}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <Text py={2}>
+                  I'm Aldo Wijaya, i'm a{" "}
+                  <span style={{ fontWeight: "bold", color: "#1978BC" }}>
+                    Web Engineer,
+                  </span>
+                </Text>
+                <Text py={2}>
+                  I was born on February 12th, 1997. I currently live in
+                  Jakarta, Indonesia.
+                </Text>
+                <Text py={2}>
+                  I got my{" "}
+                  <span style={{ fontWeight: "bold", color: "#1978BC" }}>
+                    B.Sc degree in Information Technology
+                  </span>{" "}
+                  at President University in 2019.
+                </Text>
+                <Text py={2}>
+                  My work is focused mostly on{" "}
+                  <span style={{ fontWeight: "bold", color: "#1978BC" }}>
+                    Website Development
+                  </span>
+                  .
+                </Text>
               </Text>
             </Box>
           </SimpleGrid>
         </Center>
       </Box>
 
-      <Box p={[4, 6, 8, 16]}>
-        <Center mb={2}>
-          <Text
-            fontSize={["md", "lg", "xl", "2xl"]}
-            style={{ fontWeight: "bold" }}
-          >
+      <Box p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
+        <Center mb={[4, 6, 8, 16]}>
+          <Text fontSize={["md", "lg", "xl", "2xl"]} fontWeight="bold">
             My Skills
           </Text>
         </Center>
-        <Center mb={[4, 6, 8, 16]}>
-          <Text fontSize={["xs", "sm", "md", "lg"]} align={["center"]}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </Text>
-        </Center>
         <Center>
-          <SimpleGrid columns={[2, 3, 4]} spacing={10} mb={8}>
-            <Box bg="primary.500" h={[100, 150, 200]} w={[150, 200, 300]} p={4}>
+          <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
+            <Box bg="white" w={[150, 200, 300]} p={4}>
               <Center>
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]}>React JS</Text>
+                <Icon as={FaHtml5} boxSize={12} color="primary.500" mr={2} />
+                <Text
+                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  color="primary.500"
+                >
+                  HTML
+                </Text>
               </Center>
             </Box>
-            <Box bg="gray" h={[100, 150, 200]} w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
               <Center>
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]}>Vue</Text>
+                <Icon as={FaCss3} boxSize={12} color="white" mr={2} />
+                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                  CSS
+                </Text>
               </Center>
             </Box>
-            <Box bg="primary.500" h={[100, 150, 200]} w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 300]} p={4}>
               <Center>
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]}>Android</Text>
+                <Icon as={FaJs} boxSize={12} color="primary.500" mr={2} />
+                <Text
+                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  color="primary.500"
+                >
+                  Javascript
+                </Text>
               </Center>
             </Box>
-            <Box bg="gray" h={[100, 150, 200]} w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
               <Center>
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]}>Premiere</Text>
+                <Icon as={FaAndroid} boxSize={12} color="white" mr={2} />
+                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                  Android
+                </Text>
               </Center>
             </Box>
           </SimpleGrid>
         </Center>
         <Center>
-          <SimpleGrid columns={[2, 4]} spacing={10}>
-            <Box bg="gray" h={[100, 150, 200]} w={[150, 200, 300]} p={4}>
+          <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
               <Center>
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]}>HTML</Text>
+                <Icon as={FaReact} boxSize={12} color="white" mr={2} />
+                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                  React Js
+                </Text>
               </Center>
             </Box>
-            <Box bg="primary.500" h={[100, 150, 200]} w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 300]} p={4}>
               <Center>
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]}>CSS</Text>
+                <Icon as={FaReact} boxSize={12} color="primary.500" mr={2} />
+                <Text
+                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  color="primary.500"
+                >
+                  React Native
+                </Text>
               </Center>
             </Box>
-            <Box bg="gray" h={[100, 150, 200]} w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
               <Center>
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]}>Javascript</Text>
+                <Icon as={FaVuejs} boxSize={12} color="white" mr={2} />
+                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                  Vue JS
+                </Text>
+              </Center>
+            </Box>
+            <Box bg="white" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon as={FaGithub} boxSize={12} color="primary.500" mr={2} />
+                <Text
+                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  color="primary.500"
+                >
+                  Github
+                </Text>
+              </Center>
+            </Box>
+          </SimpleGrid>
+        </Center>
+        <Center>
+          <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
+            <Box bg="white" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon as={FaGitlab} boxSize={12} color="primary.500" mr={2} />
+                <Text
+                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  color="primary.500"
+                >
+                  Gitlab
+                </Text>
+              </Center>
+            </Box>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon as={FaBootstrap} boxSize={12} color="white" mr={2} />
+                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                  Bootstrap
+                </Text>
+              </Center>
+            </Box>
+            <Box bg="white" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon
+                  as={SiAntdesign}
+                  boxSize={12}
+                  color="primary.500"
+                  mr={2}
+                />
+                <Text
+                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  color="primary.500"
+                >
+                  Antd Design
+                </Text>
+              </Center>
+            </Box>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon as={SiChakraui} boxSize={12} color="white" mr={2} />
+                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                  Chakra UI
+                </Text>
+              </Center>
+            </Box>
+          </SimpleGrid>
+        </Center>
+        <Center>
+          <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon
+                  as={MdOutlineDesignServices}
+                  boxSize={12}
+                  color="white"
+                  mr={2}
+                />
+                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                  Fiqma
+                </Text>
+              </Center>
+            </Box>
+            <Box bg="white" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon
+                  as={RiSketching}
+                  boxSize={12}
+                  color="primary.500"
+                  mr={2}
+                />
+                <Text
+                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  color="primary.500"
+                >
+                  Balsamiq
+                </Text>
+              </Center>
+            </Box>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon
+                  as={SiAdobeillustrator}
+                  boxSize={12}
+                  color="white"
+                  mr={2}
+                />
+                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                  Illustrator
+                </Text>
+              </Center>
+            </Box>
+            <Box bg="white" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon
+                  as={SiAdobephotoshop}
+                  boxSize={12}
+                  color="primary.500"
+                  mr={2}
+                />
+                <Text
+                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  color="primary.500"
+                >
+                  Photoshop
+                </Text>
               </Center>
             </Box>
           </SimpleGrid>
         </Center>
       </Box>
 
-      <Box p={[4, 6, 8, 16]} bg="#23263a">
+      <Box p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
         <Center mb={8}>
           <Text
             fontSize={["md", "lg", "xl", "2xl"]}
-            style={{ fontWeight: "bold" }}
+            fontWeight="bold"
+            color="primary.500"
           >
             Portfolio
           </Text>
@@ -281,12 +472,12 @@ function App() {
           <Tabs variant="soft-rounded" colorScheme="primary" align="center">
             <TabList>
               <Tab mx={2}>All Works</Tab>
-              <Hide below="md">
+              {/* <Hide below="md">
                 <Tab mx={2}>Website</Tab>
                 <Tab mx={2}>Mobile</Tab>
                 <Tab mx={2}>Design</Tab>
                 <Tab mx={2}>Video</Tab>
-              </Hide>
+              </Hide> */}
             </TabList>
             <TabPanels>
               <TabPanel>
@@ -322,42 +513,33 @@ function App() {
         </Center>
       </Box>
 
-      <Box p={[4, 6, 8, 16]}>
-        <Box p={[4, 6, 8, 16]}>
-          <Center mb={2}>
-            <Text
-              fontSize={["md", "lg", "xl", "2xl"]}
-              style={{ fontWeight: "bold" }}
-            >
-              Contact Me
-            </Text>
-          </Center>
-          <Center mb={8}>
-            <Text
-              fontSize={["xs", "sm", "md", "lg"]}
-              color="primary.500"
-              align={["center"]}
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </Text>
-          </Center>
-        </Box>
+      <Box p={[4, 6, 8, 16]} bg="#1978BC">
+        <Center mb={4}>
+          <Text
+            fontSize={["md", "lg", "xl", "2xl"]}
+            fontWeight="bold"
+            color="white"
+          >
+            Contact Me
+          </Text>
+        </Center>
+        <Center mb={2}>
+          <Text fontSize={["sm", "md", "lg", "xl"]} color="white">
+            <Link href="https://linkedin.com/in/aldo-wijaya" isExternal>
+              <Icon as={SiLinkedin} boxSize={4} mr={2} />
+              linkedin.com/in/aldo-wijaya
+            </Link>
+          </Text>
+        </Center>
+        <Center>
+          <Text fontSize={["sm", "md", "lg", "xl"]} color="white">
+            <Link href="mailto:aldowjy12@gmail.com" isExternal>
+              <Icon as={SiGmail} boxSize={4} mr={2} />
+              aldowjy12@gmail.com
+            </Link>
+          </Text>
+        </Center>
       </Box>
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
     </div>
   );
 }
