@@ -136,7 +136,7 @@ function App() {
             as="h1"
             size="4xl"
             mb={4}
-            fontSize={["xl", "2xl", "3xl", "4xl"]}
+            fontSize={["md", "lg", "xl", "2xl"]}
             color="primary.500"
           >
             I am Aldo Wijaya
@@ -308,40 +308,39 @@ function App() {
         </Center>
         <Center>
           <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
-            <Box bg="white" w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaHtml5} boxSize={12} color="primary.500" mr={2} />
-                <Text
-                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                <Icon
+                  as={FaHtml5}
+                  boxSize={[8, 12]}
                   color="primary.500"
-                >
+                  mr={2}
+                />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="primary.500">
                   HTML
                 </Text>
               </Center>
             </Box>
-            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaCss3} boxSize={12} color="white" mr={2} />
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                <Icon as={FaCss3} boxSize={[8, 12]} color="white" mr={2} />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="white">
                   CSS
                 </Text>
               </Center>
             </Box>
-            <Box bg="white" w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaJs} boxSize={12} color="primary.500" mr={2} />
-                <Text
-                  fontSize={["xl", "2xl", "3xl", "4xl"]}
-                  color="primary.500"
-                >
+                <Icon as={FaJs} boxSize={[8, 12]} color="primary.500" mr={2} />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="primary.500">
                   Javascript
                 </Text>
               </Center>
             </Box>
-            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaAndroid} boxSize={12} color="white" mr={2} />
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                <Icon as={FaAndroid} boxSize={[8, 12]} color="white" mr={2} />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="white">
                   Android
                 </Text>
               </Center>
@@ -350,40 +349,44 @@ function App() {
         </Center>
         <Center>
           <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
-            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaReact} boxSize={12} color="white" mr={2} />
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                <Icon as={FaReact} boxSize={[8, 12]} color="white" mr={2} />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="white">
                   React Js
                 </Text>
               </Center>
             </Box>
-            <Box bg="white" w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaReact} boxSize={12} color="primary.500" mr={2} />
-                <Text
-                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                <Icon
+                  as={FaReact}
+                  boxSize={[8, 12]}
                   color="primary.500"
-                >
+                  mr={2}
+                />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="primary.500">
                   React Native
                 </Text>
               </Center>
             </Box>
-            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaVuejs} boxSize={12} color="white" mr={2} />
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                <Icon as={FaVuejs} boxSize={[8, 12]} color="white" mr={2} />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="white">
                   Vue JS
                 </Text>
               </Center>
             </Box>
-            <Box bg="white" w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaGithub} boxSize={12} color="primary.500" mr={2} />
-                <Text
-                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                <Icon
+                  as={FaGithub}
+                  boxSize={[8, 12]}
                   color="primary.500"
-                >
+                  mr={2}
+                />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="primary.500">
                   Github
                 </Text>
               </Center>
@@ -392,45 +395,44 @@ function App() {
         </Center>
         <Center>
           <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
-            <Box bg="white" w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaGitlab} boxSize={12} color="primary.500" mr={2} />
-                <Text
-                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                <Icon
+                  as={FaGitlab}
+                  boxSize={[8, 12]}
                   color="primary.500"
-                >
+                  mr={2}
+                />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="primary.500">
                   Gitlab
                 </Text>
               </Center>
             </Box>
-            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaBootstrap} boxSize={12} color="white" mr={2} />
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                <Icon as={FaBootstrap} boxSize={[8, 12]} color="white" mr={2} />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="white">
                   Bootstrap
                 </Text>
               </Center>
             </Box>
-            <Box bg="white" w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 250]} p={4}>
               <Center>
                 <Icon
                   as={SiAntdesign}
-                  boxSize={12}
+                  boxSize={[8, 12]}
                   color="primary.500"
                   mr={2}
                 />
-                <Text
-                  fontSize={["xl", "2xl", "3xl", "4xl"]}
-                  color="primary.500"
-                >
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="primary.500">
                   Antd Design
                 </Text>
               </Center>
             </Box>
-            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={SiChakraui} boxSize={12} color="white" mr={2} />
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                <Icon as={SiChakraui} boxSize={[8, 12]} color="white" mr={2} />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="white">
                   Chakra UI
                 </Text>
               </Center>
@@ -439,94 +441,88 @@ function App() {
         </Center>
         <Center>
           <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
-            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaFigma} boxSize={12} color="white" mr={2} />
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                <Icon as={FaFigma} boxSize={[8, 12]} color="white" mr={2} />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="white">
                   Figma
                 </Text>
               </Center>
             </Box>
-            <Box bg="white" w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 250]} p={4}>
               <Center>
                 <Icon
                   as={RiSketching}
-                  boxSize={12}
+                  boxSize={[8, 12]}
                   color="primary.500"
                   mr={2}
                 />
-                <Text
-                  fontSize={["xl", "2xl", "3xl", "4xl"]}
-                  color="primary.500"
-                >
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="primary.500">
                   Balsamiq
                 </Text>
               </Center>
             </Box>
-            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 250]} p={4}>
               <Center>
                 <Icon
                   as={SiAdobeillustrator}
-                  boxSize={12}
+                  boxSize={[8, 12]}
                   color="white"
                   mr={2}
                 />
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="white">
                   Illustrator
                 </Text>
               </Center>
             </Box>
-            <Box bg="white" w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 250]} p={4}>
               <Center>
                 <Icon
                   as={SiAdobephotoshop}
-                  boxSize={12}
+                  boxSize={[8, 12]}
                   color="primary.500"
                   mr={2}
                 />
                 <Text
-                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  fontSize={["md", "lg", "xl", "3xl"]}
                   color="primary.500"
-                >
-                  Photoshop
-                </Text>
+                ></Text>
               </Center>
             </Box>
           </SimpleGrid>
         </Center>
         <Center>
           <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
-            <Box bg="white" w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={FaJira} boxSize={12} color="primary.500" mr={2} />
-                <Text
-                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                <Icon
+                  as={FaJira}
+                  boxSize={[8, 12]}
                   color="primary.500"
-                >
+                  mr={2}
+                />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="primary.500">
                   JIRA
                 </Text>
               </Center>
             </Box>
-            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 250]} p={4}>
               <Center>
-                <Icon as={SiNotion} boxSize={12} color="white" mr={2} />
-                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                <Icon as={SiNotion} boxSize={[8, 12]} color="white" mr={2} />
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="white">
                   Notion
                 </Text>
               </Center>
             </Box>
-            <Box bg="white" w={[150, 200, 300]} p={4}>
+            <Box bg="white" w={[150, 200, 250]} p={4}>
               <Center>
                 <Icon
                   as={FaGooglePlay}
-                  boxSize={12}
+                  boxSize={[8, 12]}
                   color="primary.500"
                   mr={2}
                 />
-                <Text
-                  fontSize={["xl", "2xl", "3xl", "4xl"]}
-                  color="primary.500"
-                >
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="primary.500">
                   Play Store
                 </Text>
               </Center>
