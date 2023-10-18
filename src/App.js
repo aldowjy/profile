@@ -483,10 +483,9 @@ function App() {
                   color="primary.500"
                   mr={2}
                 />
-                <Text
-                  fontSize={["md", "lg", "xl", "3xl"]}
-                  color="primary.500"
-                ></Text>
+                <Text fontSize={["md", "lg", "xl", "2xl"]} color="primary.500">
+                  Photoshop
+                </Text>
               </Center>
             </Box>
           </SimpleGrid>
