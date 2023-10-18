@@ -6,6 +6,7 @@ import {
   SiChakraui,
   SiAdobeillustrator,
   SiAdobephotoshop,
+  SiNotion,
 } from "react-icons/si";
 import {
   FaHtml5,
@@ -17,6 +18,9 @@ import {
   FaAndroid,
   FaReact,
   FaGitlab,
+  FaFigma,
+  FaJira,
+  FaGooglePlay,
 } from "react-icons/fa";
 import { MdOutlineDesignServices } from "react-icons/md";
 import { RiSketching } from "react-icons/ri";
@@ -40,38 +44,70 @@ import {
   TabPanels,
   Hide,
   Link,
+  Avatar,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionPanel,
+  AccordionIcon,
 } from "@chakra-ui/react";
-import { aldo_picture } from "../src/assets/images";
+import {
+  abc_sample_1,
+  abc_sample_2,
+  abc_sample_3,
+  aldo_picture,
+  awlogo,
+  lajual_sample_1,
+  mana_sample_1,
+  mana_sample_2,
+  mana_sample_3,
+} from "../src/assets/images";
 
 function App() {
   return (
     <div className="App">
       <Container maxW="container.xl">
         <Flex>
-          <Text p={4} color="primary.500" fontWeight="bold">
-            dovin
-          </Text>
+          <HStack p={4}>
+            <Link href="/">
+              <Image width="30px" src={awlogo} alt="Aldo Wijaya" />
+            </Link>
+          </HStack>
           <Spacer />
           <HStack p={4} spacing={12}>
-            <Button variant="ghost" size={["xs", "sm"]} p={2}>
-              Home
-            </Button>
+            <Hide above="md">
+              <Link href="/">
+                <Button variant="ghost" size={["xs", "sm"]} p={2}>
+                  Home
+                </Button>
+              </Link>
+            </Hide>
             <Hide below="md">
-              <Button variant="ghost" size={["xs", "sm"]} p={2}>
-                Services
-              </Button>
-              <Button variant="ghost" size={["xs", "sm"]} p={2}>
-                About
-              </Button>
-              <Button variant="ghost" size={["xs", "sm"]} p={2}>
-                Skills
-              </Button>
-              <Button variant="ghost" size={["xs", "sm"]} p={2}>
-                Portfolio
-              </Button>
-              <Button variant="ghost" size={["xs", "sm"]} p={2}>
-                Contact
-              </Button>
+              <Link href="#services">
+                <Button variant="ghost" size={["xs", "sm"]} p={2}>
+                  Services
+                </Button>
+              </Link>
+              <Link href="#about">
+                <Button variant="ghost" size={["xs", "sm"]} p={2}>
+                  About
+                </Button>
+              </Link>
+              <Link href="#skills">
+                <Button variant="ghost" size={["xs", "sm"]} p={2}>
+                  Skills
+                </Button>
+              </Link>
+              <Link href="#portfolio">
+                <Button variant="ghost" size={["xs", "sm"]} p={2}>
+                  Portfolio
+                </Button>
+              </Link>
+              <Link href="#contact">
+                <Button variant="ghost" size={["xs", "sm"]} p={2}>
+                  Contact
+                </Button>
+              </Link>
             </Hide>
           </HStack>
         </Flex>
@@ -111,13 +147,15 @@ function App() {
             mb={[4, 6, 8, 16]}
             fontSize={["xs", "sm", "md", "lg"]}
           >
-            professional web developer, freelancer and a gamer.
+            professional web engineer, freelancer and a gamer.
           </Heading>
-          <Button variant="solid">My Portfolio</Button>
+          <Link href="#portfolio">
+            <Button variant="solid">My Portfolio</Button>
+          </Link>
         </Box>
       </Box>
 
-      <Box p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
+      <Box id="services" p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
         <Center mb={2}>
           <Text
             fontSize={["md", "lg", "xl", "2xl"]}
@@ -150,9 +188,10 @@ function App() {
                 Web Development
               </Text>
               <Text fontSize={["xs", "sm", "md", "lg"]} color="white">
-                web development for personal branding, wedding invitations,
-                operating systems, managing dashboards, etc.
+                web development for personal branding, company profile, mini
+                project , managing dashboards, etc.
               </Text>
+              {/* wedding invitations, operating systems */}
             </Box>
             <Box
               bg="primary.500"
@@ -190,7 +229,7 @@ function App() {
                 Video Editing
               </Text>
               <Text fontSize={["xs", "sm", "md", "lg"]} color="white">
-                I am able to do basic video editing such as making After Event
+                I am able to do simple video editing such as making After Event
                 Videos, Game Highlights, etc.
               </Text>
             </Box>
@@ -198,7 +237,7 @@ function App() {
         </Center>
       </Box>
 
-      <Box p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
+      <Box id="about" p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
         <Center mb={[4, 6, 8, 16]}>
           <Text
             fontSize={["md", "lg", "xl", "2xl"]}
@@ -230,7 +269,7 @@ function App() {
                 <Text py={2}>
                   I'm Aldo Wijaya, i'm a{" "}
                   <span style={{ fontWeight: "bold", color: "#1978BC" }}>
-                    Web Engineer,
+                    Frontend Engineer,
                   </span>
                 </Text>
                 <Text py={2}>
@@ -247,7 +286,7 @@ function App() {
                 <Text py={2}>
                   My work is focused mostly on{" "}
                   <span style={{ fontWeight: "bold", color: "#1978BC" }}>
-                    Website Development
+                    developing, maintaining, improving, and optimizing a website
                   </span>
                   .
                 </Text>
@@ -257,9 +296,13 @@ function App() {
         </Center>
       </Box>
 
-      <Box p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
+      <Box id="skills" p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
         <Center mb={[4, 6, 8, 16]}>
-          <Text fontSize={["md", "lg", "xl", "2xl"]} fontWeight="bold">
+          <Text
+            fontSize={["md", "lg", "xl", "2xl"]}
+            fontWeight="bold"
+            color="primary.500"
+          >
             My Skills
           </Text>
         </Center>
@@ -398,14 +441,9 @@ function App() {
           <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
             <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
               <Center>
-                <Icon
-                  as={MdOutlineDesignServices}
-                  boxSize={12}
-                  color="white"
-                  mr={2}
-                />
+                <Icon as={FaFigma} boxSize={12} color="white" mr={2} />
                 <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
-                  Fiqma
+                  Figma
                 </Text>
               </Center>
             </Box>
@@ -456,9 +494,48 @@ function App() {
             </Box>
           </SimpleGrid>
         </Center>
+        <Center>
+          <SimpleGrid columns={[2, 4]} spacing={12} mb={8}>
+            <Box bg="white" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon as={FaJira} boxSize={12} color="primary.500" mr={2} />
+                <Text
+                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  color="primary.500"
+                >
+                  JIRA
+                </Text>
+              </Center>
+            </Box>
+            <Box bg="primary.500" borderRadius="xl" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon as={SiNotion} boxSize={12} color="white" mr={2} />
+                <Text fontSize={["xl", "2xl", "3xl", "4xl"]} color="white">
+                  Notion
+                </Text>
+              </Center>
+            </Box>
+            <Box bg="white" w={[150, 200, 300]} p={4}>
+              <Center>
+                <Icon
+                  as={FaGooglePlay}
+                  boxSize={12}
+                  color="primary.500"
+                  mr={2}
+                />
+                <Text
+                  fontSize={["xl", "2xl", "3xl", "4xl"]}
+                  color="primary.500"
+                >
+                  Play Store
+                </Text>
+              </Center>
+            </Box>
+          </SimpleGrid>
+        </Center>
       </Box>
 
-      <Box p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
+      <Box id="portfolio" p={[4, 6, 8, 16]} m={[4, 6, 8, 16]}>
         <Center mb={8}>
           <Text
             fontSize={["md", "lg", "xl", "2xl"]}
@@ -473,6 +550,7 @@ function App() {
             <TabList>
               <Tab mx={2}>All Works</Tab>
               {/* <Hide below="md">
+                <Tab mx={2}>Websites</Tab>
                 <Tab mx={2}>Website</Tab>
                 <Tab mx={2}>Mobile</Tab>
                 <Tab mx={2}>Design</Tab>
@@ -482,10 +560,174 @@ function App() {
             <TabPanels>
               <TabPanel>
                 <HStack p={2}>
-                  <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
-                </HStack>
-                <HStack p={2}>
-                  <Image src="https://bit.ly/dan-abramov" alt="Dan Abramov" />
+                  <Accordion
+                    width={["300px", "1200px"]}
+                    defaultIndex={[0]}
+                    allowToggle
+                  >
+                    <AccordionItem>
+                      <h2>
+                        <AccordionButton>
+                          <Box as="span" textAlign="left">
+                            Lajual
+                          </Box>
+                          <AccordionIcon />
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4}>
+                        <SimpleGrid columns={[1, 2]} spacing={12}>
+                          <Box m={4} p={4}>
+                            <Text
+                              fontSize={["xs", "sm", "md", "lg"]}
+                              align="left"
+                            >
+                              <Text py={2}>
+                                Web and android development project to help
+                                users to manage product, user data, create
+                                dashboard, calculate cash income and expense,
+                                and make digital report data. and my
+                                responsibility is to handle the User Interface
+                                and Data Flow.
+                              </Text>
+
+                              <Link
+                                href="https://lajual.com"
+                                pt={16}
+                                fontWeight="bold"
+                                color="primary.500"
+                                isExternal
+                              >
+                                lajual.com
+                              </Link>
+                            </Text>
+                          </Box>
+                          <Box m={4} p={4} align="center">
+                            <Image
+                              width="500px"
+                              objectFit="cover"
+                              src={lajual_sample_1}
+                              alt="lajual-sample-1"
+                            />
+                          </Box>
+                        </SimpleGrid>
+                      </AccordionPanel>
+                    </AccordionItem>
+
+                    <AccordionItem>
+                      <h2>
+                        <AccordionButton>
+                          <Box as="span" textAlign="left">
+                            MANA Clan ID
+                          </Box>
+                          <AccordionIcon />
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4}>
+                        <SimpleGrid columns={[1, 2]} spacing={12}>
+                          <Box m={4} p={4}>
+                            <Text
+                              fontSize={["xs", "sm", "md", "lg"]}
+                              align="left"
+                            >
+                              <Text py={2}>
+                                Website development to display a database of
+                                items, monsters, equips etc.
+                              </Text>
+
+                              <Link
+                                href="https://mana-clan.com/"
+                                pt={16}
+                                fontWeight="bold"
+                                color="primary.500"
+                                isExternal
+                              >
+                                mana-clan.com
+                              </Link>
+                            </Text>
+                          </Box>
+                          <Box m={4} p={4} align="center">
+                            <Image
+                              width="500px"
+                              objectFit="cover"
+                              src={mana_sample_1}
+                              alt="mana-sample-1"
+                            />
+                          </Box>
+                        </SimpleGrid>
+                        <SimpleGrid columns={[1, 2]} spacing={12}>
+                          <Box m={4} p={4}>
+                            <Image
+                              width="500px"
+                              objectFit="cover"
+                              src={mana_sample_2}
+                              alt="mana-sample-2"
+                            />
+                          </Box>
+                          <Box m={4} p={4}>
+                            <Image
+                              width="500px"
+                              objectFit="cover"
+                              src={mana_sample_3}
+                              alt="mana-sample-3"
+                            />
+                          </Box>
+                        </SimpleGrid>
+                      </AccordionPanel>
+                    </AccordionItem>
+
+                    <AccordionItem>
+                      <h2>
+                        <AccordionButton>
+                          <Box as="span" textAlign="left">
+                            ABC Exhibition 2022
+                          </Box>
+                          <AccordionIcon />
+                        </AccordionButton>
+                      </h2>
+                      <AccordionPanel pb={4}>
+                        <SimpleGrid columns={[1, 2]} spacing={12}>
+                          <Box m={4} p={4}>
+                            <Text
+                              fontSize={["xs", "sm", "md", "lg"]}
+                              align="left"
+                            >
+                              <Text py={2}>
+                                Website development to display a clothing and
+                                model exhibition held by one of the campuses in
+                                South Korea.
+                              </Text>
+                            </Text>
+                          </Box>
+                          <Box m={4} p={4}>
+                            <Image
+                              width="500px"
+                              objectFit="cover"
+                              src={abc_sample_1}
+                              alt="abc-sample-1"
+                            />
+                          </Box>
+                        </SimpleGrid>
+                        <SimpleGrid columns={[1, 2]} spacing={12}>
+                          <Box m={4} p={4}>
+                            <Image
+                              width="500px"
+                              objectFit="cover"
+                              src={abc_sample_2}
+                              alt="abc-sample-3"
+                            />
+                          </Box>
+                          <Box m={4} p={4}>
+                            <Image
+                              width="500px"
+                              objectFit="cover"
+                              src={abc_sample_3}
+                              alt="abc-sample-3"
+                            />
+                          </Box>
+                        </SimpleGrid>
+                      </AccordionPanel>
+                    </AccordionItem>
+                  </Accordion>
                 </HStack>
               </TabPanel>
               <TabPanel>
@@ -513,7 +755,7 @@ function App() {
         </Center>
       </Box>
 
-      <Box p={[4, 6, 8, 16]} bg="#1978BC">
+      <Box id="contact" p={[4, 6, 8, 16]} bg="#1978BC">
         <Center mb={4}>
           <Text
             fontSize={["md", "lg", "xl", "2xl"]}
